@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fav-fact</title>
+</head>
+
+<body>
+    <%console.log('inside fav ..',result)%>
+        <% result.forEach(ele=>{%>
+            <div>
+                <h3>
+                    <%=ele.type%>
+                </h3>
+                <h3>
+                    <%=ele.text%>
+                </h3>
+                <br>
+                <a href="/facts/ <%=ele.id%>">show details</a>
+                <br><br>
+            </div>
+
+            <%})%>
+
+</body>
+
+</html>

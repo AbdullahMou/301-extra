@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body>
+    <% result.forEach(ele=>{%>
+        <div>
+            <h3>
+                <%=ele.type%>
+            </h3>
+            <h3>
+                <%=ele.text%>
+            </h3>
+            <br>
+        </div>
+        <form action="/fav" method="post">
+            <input hidden type="text" name="type" value="<%=ele.type%>">
+            <input hidden type="text" name="text" value="<%=ele.text%>">
+            <input type="submit" value="add to fav">
+        </form>
+        <%})%>
+
+</body>
+
+</html>

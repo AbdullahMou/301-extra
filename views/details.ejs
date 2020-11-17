@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <% result.forEach(ele=>{%>
+        <div>
+            <h3>
+                <%=ele.type%>
+            </h3>
+            <h3>
+                <%=ele.text%>
+            </h3>
+            <br>
+            <form action="/details/<%=ele.id%>?_method=put" method="post">
+                <input type="text" name="type" value="<%=ele.type%>">
+                <input type="text" name="text" value="<%=ele.text%>">
+                <input type="submit" value="update details">
+            </form>
+            <form action="/details/<%=ele.id%>?_method=delete" method="post">
+
+                <input type="submit" value="Delete"> </div>
+
+        <%})%>
+            <br>
+</body>
+
+</html>
